@@ -31,15 +31,6 @@ const LoginAdmin = () => {
   };
 
   // Menggunakan interceptor Axios untuk menyertakan token pada setiap permintaan HTTP
-  axios.interceptors.request.use(
-    (config) => {
-      config.headers.Authorization = `Bearer ${token}`;
-      return config;
-    },
-    (error) => {
-      return Promise.reject(error);
-    }
-  );
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
